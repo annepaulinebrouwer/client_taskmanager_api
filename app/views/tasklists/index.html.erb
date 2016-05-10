@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-4 col-sm-12">
       <h1>Here you can see all you taklists</h1>
-      <h4>By clicking on a tasklist, you can see detail descriptions of the tasks inside</h4>
+      <h4>By clicking on a tasklist, you can see detail descriptions of the tasks</h4>
       <ol>
         <% @tasklists.each do |tasklist|  %>
         <li><%= link_to tasklist["name"], tasklist_path(tasklist["id"]), {class: "link"} %>
