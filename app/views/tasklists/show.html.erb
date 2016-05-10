@@ -12,23 +12,28 @@
       </li>
       <li>
         <strong>TASKS:</strong>
-          <div class="list">
-            <ol>
-              <% @tasks.each do |task| %>
-                <li>
-                  <strong><%= task["name"] %></strong>
-                  <p><%= task["description"] %></p>
-                 <div><%= link_to 'Delete', tasklist_task_path(@tasklist["id"], task["id"]), method: :delete, class: "btn btn-warning" %></div>
-                </li>
-              <% end %>
-            </ol>
-          </div>
-           <p><%= link_to "Add task", new_tasklist_task_path(@tasklist["id"]), {class: "btn btn-success"} %></p>
-          <p><%= link_to 'Delete this tasklist', { action: :destroy, id: @tasklist["id"] }, method: :delete, class: "btn btn-danger" %></p>
-        </li>
-        <p><%= link_to 'Back to all tasklists', tasklists_path, {class: "link"} %></p>
-      </ul>
-    </div>
+        <div class="list">
+          <ol>
+            <% @tasks.each do |task| %>
+            <li>
+              <strong><%= task["name"] %></strong>
+              <p><%= task["description"] %></p>
+              <div class="tag"><% unless task["tag"].nil? %>
+                <% task["tag"].each do |tag| %>
+                  <%= tag["name"] %>
+                <% end %>
+              <% end %></div>
+              <%= link_to 'Delete task', tasklist_task_path(@tasklist["id"], task["id"]), method: :delete, class: "link" %>
+            </li>
+            <% end %>
+          </ol>
+        </div>
+        <p><%= link_to "New task", new_tasklist_task_path(@tasklist["id"]), {class: "btn btn-success"} %></p>
+        <p><%= link_to 'Delete this tasklist', { action: :destroy, id: @tasklist["id"] }, method: :delete, class: "btn btn-danger" %></p>
+      </li>
+      <p><%= link_to 'Back to all tasklists', tasklists_path, {class: "link"} %></p>
+    </ul>
   </div>
+</div>
 </div>
 
