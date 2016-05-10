@@ -1,19 +1,36 @@
 class PagesController < ApplicationController
+
+
   def home
   end
 
 
-  api = HyperResource.new(root: 'https://taskmanagerapi.herokuapp.com/api/v1/tasklists',
-        headers: {'Accept' => 'application/vnd.taskmanagerapi.herokuapp.com.v1+json'},
-        auth: {basic: ['username', 'password']})
+  # string = '{"tasklist": { "name": "Work", "description": "All these tasks related to the my working life" } }'
+  # hash = JSON.parse(string)
+  # api.post({:data => hash})
+  # puts hash
+  # root = api.get
+  # root.response_body
 
-  string = '{"tasklist": { "name": "Work", "description": "All these tasks related to the my working life" } }'
-  hash = JSON.parse(string)
-  api.post({:data => hash})
-  puts hash
-  root = api.get
-  root.response_body
+  # def new
+  #   @tasklist = Tasklist.new
+  # end
 
+  # def create
+  #   @tasklist = tasklist_params
+  #   hash = JSON.parse(tasklist)
+  #   api.post({:data => hash})
+  # end
+
+  # private
+
+  # def tasklist_params
+  #     params.require(:tasklist).permit(
+  #       :name,
+  #       :description,
+  #     )
+  # end
+  # #
   # blendle_user = api.users.where(email: "blendle@gmail.com").first
 
   # JSON.parse(api.get.body.to_json).to_xml(:root => :my_root)
@@ -29,7 +46,4 @@ class PagesController < ApplicationController
   #     redirect '/', :error => 'Something went wrong, please try again'
   #   end
   # end
-
-
-
 end

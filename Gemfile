@@ -8,14 +8,15 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
+gem 'rest-client'
 
+gem 'hyperresource'
 gem 'simple_form'
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
-gem 'simple_form'
 gem 'autoprefixer-rails'
 
 group :development, :test do
@@ -25,8 +26,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-
-
 end
 
 group :production do

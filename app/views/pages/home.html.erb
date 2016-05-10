@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4 col-sm-12">
+      <div class="intro">
+        <h1>Welcome to the Task Manager CLIENT</h1>
+        <ul>
+          <li>Let's have a look at all the <%= link_to "TASKLISTS",  tasklists_path, {class: "link"} %></li>
+          <li>Time to add a <%= link_to "new tasklist", new_tasklist_path, {class: "link"} %> ?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

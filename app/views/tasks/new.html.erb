@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6 form-group">
+      <h2>Hi,<small> welcome to the taskmanager</small></h2>
+      <p>What is the task you want to add?
+        Please provide a name and description</p>
+      <%= form_tag tasklist_tasks_path, method: :post do %>
+        <%= text_field_tag :name %>
+        <%= text_field_tag :description %>
+        <%= submit_tag "Create" %>
+      <% end %>
+    </div>
+  </div>
+</div>
