@@ -19,7 +19,7 @@ class TasksController < ApplicationController
     RestClient.post url, api_params, headers
 
     flash[:notice] = "Task successfully created"
-    redirect_to tasklist_path(params[:tasklist_id])
+    redirect_to tasklists_path(params[:tasklist_id])
   end
 
 
@@ -35,6 +35,6 @@ class TasksController < ApplicationController
     RestClient.delete url, headers
 
     flash[:notice] = "Task successfully deleted"
-    redirect_to tasklist_path(params[:tasklist_id])
+    redirect_to tasklists_path(params[:tasklist_id])
   end
 end
