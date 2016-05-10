@@ -1,14 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-4 col-sm-12">
-      <h1>Here you can see all you taklists</h1>
-      <h4>By clicking on a tasklist, you can see detail descriptions of the tasks</h4>
+      <h1><strong>Hi Blendle, </strong> here you find all tasklists</h1>
+      <h4>Click on a tasklist to explore more, <br> Or create your own tasklist and start adding and deleting tasks.. </h4>
       <ol>
         <% @tasklists.each do |tasklist|  %>
         <li><%= link_to tasklist["name"], tasklist_path(tasklist["id"]), {class: "link"} %>
          <p>
          <%= tasklist["description"]%></p></li>
         <% end %>
+        <p><%= link_to "New Tasklist", new_tasklist_path,  {class: "btn btn-success"} %></p>
       </ol>
     </div>
   </div>
