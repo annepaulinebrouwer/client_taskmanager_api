@@ -1,7 +1,8 @@
 Welcome!
 
 This is a client for a Task Manager API that I build.
-The API taskmanager is hosted on https://taskmanagerapi.herokuapp.com/api/v1/tasklists
+You can access the API Client on http://taskmanager-api-client.herokuapp.com
+The API Task Manager is hosted on https://taskmanagerapi.herokuapp.com/api/v1/tasklists
 
 The taskmanager Client has currently the following functions
   - show all tasklist
