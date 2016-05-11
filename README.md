@@ -26,4 +26,6 @@ Next steps:
 
 ******************************************************************************************
 Have a look at http://taskmanager-api-client.herokuapp.com
+******************************************************************************************
 
+In case the server is not working, please download my code and run the app on local host by using the command 'rails s'. You can access than the app on localhost:3000
